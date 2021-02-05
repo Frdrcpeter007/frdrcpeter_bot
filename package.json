@@ -1,0 +1,19 @@
+{
+  "name": "frdrcpeter_bot",
+  "version": "0.0.1",
+  "description": "Mon premier telegram Bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "keywords": [
+    "Telegram",
+    "Bot"
+  ],
+  "author": "Peter NDENGO",
+  "license": "ISC",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.51.0"
+  }
+}
