@@ -17,7 +17,6 @@ bot.on('message', (msg) => {
     let text = msg.text,
         userid = msg.from.id,
         chatid = msg.chat.id;
-    
 
     if (text) {
         translate(text, { to: 'fr' }).then(textTrans => {
