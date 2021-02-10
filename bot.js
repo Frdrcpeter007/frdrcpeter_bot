@@ -19,10 +19,14 @@ bot.on('message', (msg) => {
         chatid = msg.chat.id;
 
     if (text) {
-        translate(text, { to: 'fr' }).then(textTrans => {
-            bot.sendMessage(chatid, `🈵 ${textTrans.text}`);
-        }).catch(err => {
-            bot.sendMessage(chatid, "J'ai eu du mal à traduire ton texte...")
-        });
+        if (text == '/start') {
+            bot.sendMessage(chatid, `Bonjour @${msg.from.username || 'Inconnue'}, ce petit bot vous permet de traduire vos texte de n'importe quel langue en Français\nVas-y lance toi !`)
+        } else {
+            translate(text, { to: 'fr' }).then(textTrans => {
+                bot.sendMessage(chatid, `🈵 ${textTrans.text}`);
+            }).catch(err => {
+                bot.sendMessage(chatid, "J'ai eu du mal à traduire ton texte...")
+            });
+        }
     }
 })
