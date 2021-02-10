@@ -18,6 +18,7 @@ bot.on('message', (msg) => {
         userid = msg.from.id,
         chatid = msg.chat.id;
 
+    console.log(`@${msg.from.username} => ${text}`)
     if (text) {
         if (text == '/start') {
             bot.sendMessage(chatid, `Bonjour @${msg.from.username || 'Inconnue'}, ce petit bot vous permet de traduire vos texte de n'importe quel langue en Français\nVas-y lance toi !`)
